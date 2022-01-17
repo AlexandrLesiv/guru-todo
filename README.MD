@@ -1,0 +1,1 @@
+An example of the TODO app made that shows an example of usage REST-OVER-WEBSOCKET approach 

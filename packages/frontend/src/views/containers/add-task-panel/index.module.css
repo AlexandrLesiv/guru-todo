@@ -1,0 +1,34 @@
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+}
+
+.createTaskFormSection {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  /* flex-grow: 1; */
+}
+
+.createTaskFormLabel {
+  display: inline-block;
+  padding-right: 1rem;
+  font-size: 1.4rem;
+}
+
+.formItem {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1rem;
+  padding: 0.5rem 2rem;
+  line-height: 1.4rem;
+}
+
+.createTaskFormSection:nth-child(2) {
+  flex-grow: 1;
+}
+
+.formItem {
+  width: 100%;
+}

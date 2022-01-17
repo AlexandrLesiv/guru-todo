@@ -1,0 +1,25 @@
+{
+  "name": "todoguru",
+  "private": true,
+  "version": "1.0.0",
+  "repository": {
+    "type": "git"
+  },
+  "author": {
+    "name": "Lesiv Alexandr",
+    "email": "lesivolexandr@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "cd packages/server && yarn start",
+    "dev": "yarn dev:frontend & yarn dev:server",
+    "dev:frontend": "cd packages/frontend && yarn dev",
+    "dev:server": "cd packages/server && yarn dev",
+    "docker:build": "cd docker && docker-compose build",
+    "docker:dev": "cd docker && docker-compose -f docker-compose.yml -f docker-compose.development.yml up",
+    "docker:start": "cd docker && docker-compose up"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}

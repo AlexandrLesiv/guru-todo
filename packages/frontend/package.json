@@ -1,0 +1,29 @@
+{
+  "name": "@todoguru/frontend",
+  "version": "1.0.0",
+  "license": "MIT",
+  "source": "public/index.html",
+  "author": {
+    "name": "Lesiv Alexandr",
+    "email": "lesivolexandr@gmail.com"
+  },
+  "scripts": {
+    "dev": "parcel --open --no-cache",
+    "build": "parcel build --no-source-maps --dist-dir /files",
+    "build:docker": "parcel build --no-source-maps --dist-dir ../../docker/files"
+  },
+  "devDependencies": {
+    "@todoguru/shared": "^1.0.0",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "dotenv": "^13.0.1",
+    "parcel": "^2.2.0",
+    "qs": "^6.10.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "socket.io-client": "^4.4.1",
+    "tslib": "^2.3.1",
+    "typescript": "^4.5.4",
+    "typescript-plugin-css-modules": "^3.4.0"
+  }
+}

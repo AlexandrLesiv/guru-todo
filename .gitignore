@@ -1,0 +1,10 @@
+/**/node_modules
+.idea
+**/*.code-workspace
+yarn.lock
+**/*.env
+.parcel-cache
+docker-environment
+!docker/docker-environment.example/*.env
+**.log
+/**/uploads

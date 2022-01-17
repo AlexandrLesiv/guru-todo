@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+
+  # Frontend
+  frontend:
+    build:
+      context: ../
+      dockerfile: ./packages/frontend/Dockerfile
+    container_name: TodoGuruFrontend
+    restart: unless-stopped
+    tty: true
+    stdin_open: true
+    depends_on:
+      - server
+    env_file: ./docker-environment/client.env
+    volumes:
+      - ./files:/files
+    environment:
+      NODE_ENV: 'production'
+
+  # Backend
+  server:
+    build:
+      context: ../
+      dockerfile: ./packages/server/Dockerfile
+    container_name: TodoGuruBackend
+    command: npm run start
+    restart: always
+    tty: true
+    stdin_open: true
+    ports:
+      - "80:80"
+    env_file: ./docker-environment/server.env
+    volumes:
+      - ./files:/files
+    environment:
+      NODE_ENV: 'production'
